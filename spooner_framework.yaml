@@ -1,0 +1,34 @@
+$engine: 3
+name: spooner-recipe
+version: 1.0.0
+author: nicoo
+description: 
+
+
+
+tasks:
+  # Download default CFX resources
+  - action: download_github
+    src: https://github.com/citizenfx/cfx-server-data
+    ref: master
+    subpath: resources
+    dest: ./resources/[cfx-default]
+  
+  # Basic 
+  - action: download_github
+    src: https://github.com/Nicoo34/spooner-recipe
+    ref: main
+    dest: ./tmp/spooner
+
+
+  - action: move_path
+    src: ./tmp/gum_framework/server.cfg
+    dest: ./server.cfg
+
+# spooner
+
+  - action: download_github
+    src: https://github.com/kibook/spooner
+    ref: main
+    dest: ./resources/[spooner]/
+
