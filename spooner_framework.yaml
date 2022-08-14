@@ -22,7 +22,7 @@ tasks:
 
 
   - action: move_path
-    src: ./tmp/gum_framework/server.cfg
+    src: ./tmp/spooner/server.cfg
     dest: ./server.cfg
 
 # spooner
